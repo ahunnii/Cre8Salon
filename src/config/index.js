@@ -4,7 +4,7 @@ module.exports = {
     'A trendy full service salon in South Lyon MI. Gift certificates available, walk ins welcome. For men, women, and children. We pledge to Cre8 a comfortable, contemporary atmosphere with superior service and continual education.',
   siteKeywords:
     'Cre8, Salon, Cre8 Salon, Create, South Lyon, hairdresser, haircut, Lyon, perm, color, trendy',
-  siteUrl: 'https://cre8salonsouthylon.com',
+  siteUrl: 'https://cre8southylon.com',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-152644100-1',
   googleVerification: 'NsIo5NcbMzmkjMbPwZlo6IRzbIRxprljN_iw9RVAQ6A',
