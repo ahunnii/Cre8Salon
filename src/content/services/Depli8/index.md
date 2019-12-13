@@ -3,7 +3,8 @@ date: '2012-11-01'
 title: 'DEPLI8'
 show: 'true'
 ---
-<table>
+
+<table style="padding-bottom: 1.25rem">
   <tr><td><strong>Brow Wax</strong></td>            <td><span>15 & Up</span> </td></tr>
   <tr><td><strong>Chin Wax</strong></td>            <td><span>15 & Up</span></td></tr>
   <tr><td><strong>Lip Wax</strong></td>             <td><span>15 & Up</span></td></tr>
@@ -30,11 +31,4 @@ show: 'true'
       <tr><td><strong>Eyelashes</strong></td>            <td><span>15 & Up</span></td></tr>
         <tr><td><strong>Just Airbrush</strong></td>            <td><span>15 & Up</span></td></tr>
 
-  <tr style="visibility:hidden; line-height:0.1;">
-    <td><strong>Lorem ipsum dolor sit amet metus.</strong></td>
-    <td><em>NARN</em></td>
-  </tr>
 </table>
-
-
-
