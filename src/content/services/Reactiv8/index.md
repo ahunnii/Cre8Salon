@@ -5,5 +5,5 @@ show: 'true'
 ---
 
 <table style="padding-bottom: 1.25rem">
-  <tr><td><strong>Perm</strong></td><td><span>70 & Up</span></td></tr>
+  <tr><td><strong>Perm</strong></td><td><span>75 +</span></td></tr>
 </table>
