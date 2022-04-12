@@ -5,9 +5,9 @@ show: 'true'
 ---
 
 <table style="padding-bottom: 1.25rem">
-  <tr><td><strong>Brow Wax</strong></td>            <td><span>15 +</span> </td></tr>
-  <tr><td><strong>Chin Wax</strong></td>            <td><span>15 +</span></td></tr>
-  <tr><td><strong>Lip Wax</strong></td>             <td><span>15 +</span></td></tr>
+  <tr><td><strong>Brow Wax</strong></td>            <td><span>17 +</span> </td></tr>
+  <tr><td><strong>Chin Wax</strong></td>            <td><span>17 +</span></td></tr>
+  <tr><td><strong>Lip Wax</strong></td>             <td><span>17 +</span></td></tr>
   <tr><td><strong>Brow | Lip | Chin Wax</strong></td>   <td><span>35 +</span></td></tr>
   <tr><td><strong>Neck Wax</strong></td>            <td><span>15 +</span></td></tr>
   <tr><td><strong>Cheeks Wax</strong></td>          <td><span>10 +</span></td></tr>
