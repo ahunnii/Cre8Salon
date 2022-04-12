@@ -5,5 +5,5 @@ show: 'true'
 ---
 
 <table style="padding-bottom: 1.25rem">
-  <tr><td><strong>Conditioning treatment</strong></td><td><span>25 +</span></td></tr>
+  <tr><td><strong>Conditioning treatment</strong></td><td><span>30 +</span></td></tr>
 </table>
