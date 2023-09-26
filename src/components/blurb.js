@@ -1,25 +1,25 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
-import sr from '@utils/sr';
-import { srConfig } from '@config';
-import styled from 'styled-components';
-import { theme, mixins, Section, Heading } from '@styles';
 import { HeroGallery } from '@components';
+import { srConfig } from '@config';
+import { Heading, Section, mixins, theme } from '@styles';
+import sr from '@utils/sr';
+import PropTypes from 'prop-types';
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
 const { fonts } = theme;
 
 const BlurbContainer = styled(Section)`
-    text-align: center;
-    margin-top:35px;
-    a {
+  text-align: center;
+  margin-top: 35px;
+  a {
     ${mixins.bigButton};
-    }
-    h2{
-    font-weight:100;
-    color:black;
+  }
+  h2 {
+    font-weight: 100;
+    color: black;
     margin: 50px auto;
-    font-family:${fonts.Montserrat};
-    }
+    font-family: ${fonts.Montserrat};
+  }
 `;
 
 const Blurb = ({ data }) => {
@@ -29,12 +29,18 @@ const Blurb = ({ data }) => {
 
   return (
     <div>
-      <br></br><br></br><br></br><br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <HeroGallery></HeroGallery>
       <BlurbContainer id="blurb" ref={revealContainer}>
         <Heading>Our Mission:</Heading>
         <h2 dangerouslySetInnerHTML={{ __html: html }} />
-        <a  href="https://www.facebook.com/Cre8Salon.Inc" target="blank"> Like Us of Facebook!</a>
+        <a href="https://www.facebook.com/Cre8Salon.Inc" target="blank">
+          {' '}
+          Like Us on Facebook!
+        </a>
       </BlurbContainer>
     </div>
   );
