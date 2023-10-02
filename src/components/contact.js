@@ -76,7 +76,7 @@ const Contact = ({ data }) => {
           <p dangerouslySetInnerHTML={{ __html: html }} />
           <a href="https://www.facebook.com/Cre8Salon.Inc" target="blank">
             {' '}
-            Like Us on Facebook!
+            Like us on Facebook!
           </a>
         </section>
         <MapRender></MapRender>

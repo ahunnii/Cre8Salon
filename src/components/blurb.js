@@ -39,7 +39,7 @@ const Blurb = ({ data }) => {
         <h2 dangerouslySetInnerHTML={{ __html: html }} />
         <a href="https://www.facebook.com/Cre8Salon.Inc" target="blank">
           {' '}
-          Like Us on Facebook!
+          Like us on Facebook!
         </a>
       </BlurbContainer>
     </div>
