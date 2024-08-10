@@ -9,7 +9,7 @@ title: 'Contact Us'
 <h3>Hours of Operation:</h3>
 <table>
 <tr><td><strong>Monday</strong></td>	<td><span>Closed</span></td></tr>
-<tr><td><strong>Tuesday</strong></td>	<td><span>10AM–6PM</span></td></tr>
+<tr><td><strong>Tuesday</strong></td>	<td><span>10AM–8PM</span></td></tr>
 <tr><td><strong>Wednesday</strong></td>	<td><span>10AM–8PM</span></td></tr>
 <tr><td><strong>Thursday</strong></td>	<td><span>10AM–8PM</span></td></tr>
 <tr><td><strong>Friday</strong></td>	<td><span>10AM–5PM</span></td></tr>

@@ -3,7 +3,10 @@ import { IconExternal, IconFolder, IconGithub } from '@components/icons';
 import { srConfig } from '@config';
 import { Button, Heading, Section, media, mixins, theme } from '@styles';
 import sr from '@utils/sr';
-import Img from 'gatsby-image';
+
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+import { StaticImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -75,13 +78,27 @@ const ProjectDescription = styled.div`
   }
 `;
 
-const FeaturedImg = styled(Img)`
+const FeaturedImg = styled(GatsbyImage)`
   width: 100%;
   max-width: 100%;
-  height: 500px;
+  object-fit: cover;
+  -o-object-fit: cover;
+  aspect-ratio: 3/4;
+  object-position: left;
 `;
 
-const Stylists = ({ data }) => {
+const TeamImage = styled(GatsbyImage)`
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+`;
+
+const Stylists = ({ data, team }) => {
+  const { frontmatter } = team[0].node;
+  const { avatar } = frontmatter;
+  const teamImage = getImage(avatar);
+
   const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
@@ -95,20 +112,22 @@ const Stylists = ({ data }) => {
   const projects = data.filter(({ node }) => node.frontmatter.show === 'true');
   const firstSix = projects.slice(0, GRID_LIMIT);
   const projectsToShow = showMore ? projects : firstSix;
+  const width = 300;
+  const height = (300 * 16) / 9;
 
   return (
     <ProjectsContainer>
       <span id="stylists" ref={revealContainer}></span>
-
       <Heading>Meet Our Staff</Heading>
-
-      <p>&nbsp;</p>
+      <TeamImage image={teamImage} className="img" />
       <ProjectsGrid>
         <TransitionGroup className="projects">
           {projectsToShow &&
             projectsToShow.map(({ node }, i) => {
               const { frontmatter, html } = node;
               const { title, avatar, external } = frontmatter;
+              const image = getImage(avatar);
+
               return (
                 <CSSTransition
                   key={i}
@@ -122,7 +141,7 @@ const Stylists = ({ data }) => {
                       transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
                     }}>
                     <ProjectInner>
-                      <FeaturedImg fluid={avatar.childImageSharp.fluid} />
+                      <FeaturedImg image={image} alt={title} className="img" />
 
                       <ProjectTop>
                         <ProjectName>{title}</ProjectName>

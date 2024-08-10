@@ -1,16 +1,16 @@
-import React from 'react';
+import { Blurb, Contact, Layout, Services, Stylists } from '@components';
+import { Main, mixins } from '@styles';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Layout, Blurb, Stylists, Contact, Services } from '@components';
+import React from 'react';
 import styled from 'styled-components';
-import { mixins, Main } from '@styles';
 
 const MainContainer = styled(Main)`
   ${mixins.sidePadding};
   counter-reset: section;
 `;
 const Border = styled.hr`
-  width:85vw;
+  width: 85vw;
   overflow: visible; /* For IE */
   padding: 0;
   border: none;
@@ -26,7 +26,7 @@ const IndexPage = ({ location, data }) => (
       <Border></Border>
       <Services data={data.services.edges} />
       <Border></Border>
-      <Stylists data={data.stylists.edges} />
+      <Stylists data={data.stylists.edges} team={data.team.edges} />
       <Border></Border>
       <Contact data={data.contact.edges} />
     </MainContainer>
@@ -68,7 +68,7 @@ export const pageQuery = graphql`
     }
     stylists: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/stylists/" } }
-      sort: { fields: [frontmatter___id], order: ASC}
+      sort: { fields: [frontmatter___id], order: ASC }
     ) {
       edges {
         node {
@@ -76,9 +76,7 @@ export const pageQuery = graphql`
             title
             avatar {
               childImageSharp {
-                fluid( quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
               }
             }
             status
@@ -88,6 +86,20 @@ export const pageQuery = graphql`
         }
       }
     }
+    team: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/team/" } }) {
+      edges {
+        node {
+          frontmatter {
+            avatar {
+              childImageSharp {
+                gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+              }
+            }
+          }
+        }
+      }
+    }
+
     contact: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contact/" } }) {
       edges {
         node {

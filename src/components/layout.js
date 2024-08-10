@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
+import { Footer, Head, Loader, Nav } from '@components';
+import { GlobalStyle, theme } from '@styles';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Head, Loader, Nav, Footer } from '@components';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { GlobalStyle, theme } from '@styles';
 const { colors, fontSizes, fonts } = theme;
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
@@ -52,8 +52,6 @@ const Layout = ({ children, location }) => {
     stars: null,
     forks: null,
   });
-
-
 
   useEffect(() => {
     if (isLoading) {
